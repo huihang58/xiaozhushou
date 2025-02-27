@@ -1,6 +1,6 @@
 // 和风天气API配置
 // API密钥
-const API_KEY = '8e1a69ca22f04d63b33a0af0da7bd329';
+const API_KEY = 'YOUR_API_KEY';
 const BASE_URL = 'https://devapi.qweather.com/v7';  
 
 // 获取实时天气数据
