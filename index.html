@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天气小助手</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>天气小助手 🌤️</h1>
+            <div class="search-box">
+                <input type="text" class="search-input" id="cityInput" placeholder="输入城市名称...">
+                <button class="查询">查询</button>
+            </div>
+        </header>
+
+        <main>
+            <section class="weather-card">
+                <div class="current-weather">
+                    <div class="weather-icon">
+                        <!-- 天气图标将通过JS动态插入 -->
+                    </div>
+                    <div class="weather-info">
+                        <h2 class="city-name">正在定位...</h2>
+                        <div class="temperature">--°C</div>
+                        <div class="weather-description">天气状况</div>
+                        <div class="details">
+                            <span>湿度: --%</span>
+                            <span>风速: -- m/s</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="clothing-advice">
+                <h3>👔 穿衣建议</h3>
+                <div class="advice-content">
+                    <p>等待天气数据...</p>
+                </div>
+            </section>
+
+            <section class="forecast">
+                <h3>📅 未来天气预报</h3>
+                <div class="forecast-list">
+                    <!-- 天气预报将通过JS动态插入 -->
+                </div>
+            </section>
+
+            <section class="travel-mode">
+                <h3>✈️ 旅行模式</h3>
+                <div class="city-comparison">
+                    <div class="add-city-form">
+                        <input type="text" id="travelCityInput" placeholder="输入要添加的城市...">
+                        <button id="addCityButton">添加城市</button>
+                    </div>
+                    <div class="city-list">
+                        <!-- 城市对比将通过JS动态插入 -->
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="./main.js" type="module"></script>
+</body>
+</html>

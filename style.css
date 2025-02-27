@@ -1,0 +1,369 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    background: linear-gradient(135deg, #6dd5ed, #2193b0);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#cityInput {
+    padding: 10px 15px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    width: 300px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#cityInput:focus {
+    border-color: #2193b0;
+}
+
+button {
+    padding: 10px 20px;
+    background: #2193b0;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #1a7a8c;
+}
+
+.weather-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.current-weather {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.weather-icon {
+    width: 120px;
+    height: 120px;
+}
+
+.weather-info {
+    flex: 1;
+}
+
+.city-name {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.temperature {
+    font-size: 3em;
+    font-weight: bold;
+    color: #2193b0;
+    margin-bottom: 10px;
+}
+
+.weather-description {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.details {
+    display: flex;
+    gap: 20px;
+    color: #777;
+}
+
+section {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.clothing-advice .advice-content {
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    color: #555;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.weather-mood {
+    font-size: 1.2em;
+    color: #2193b0;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 500;
+    animation: fadeIn 0.6s ease-out;
+}
+
+.clothing-tips {
+    white-space: pre-line;
+    line-height: 1.6;
+    color: #666;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.forecast-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.forecast-item {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.city-comparison {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.city-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.city-item {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.city-item:hover {
+    transform: translateY(-5px);
+}
+
+.remove-city {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    color: #999;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+.remove-city:hover {
+    color: #ff4444;
+}
+
+.city-temp {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.main-temp {
+    font-size: 2em;
+    font-weight: bold;
+    color: #2193b0;
+    margin: 0;
+}
+
+.feels-like {
+    color: #666;
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+.city-weather {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.city-weather p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.city-advice {
+    text-align: center;
+}
+
+.toggle-tips {
+    background: #2193b0;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-tips:hover {
+    background: #1b7a94;
+}
+
+.clothing-tips {
+    margin-top: 15px;
+    text-align: left;
+    line-height: 1.6;
+    color: #666;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .current-weather {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .weather-icon {
+        margin: 0 auto;
+    }
+
+    .details {
+        justify-content: center;
+    }
+
+    #cityInput {
+        width: 200px;
+    }
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+section {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.weather-icon img {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+.travel-mode {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.add-city-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+#travelCityInput {
+    flex: 1;
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+}
+
+#travelCityInput:focus {
+    border-color: #2196F3;
+    box-shadow: 0 0 5px rgba(33, 150, 243, 0.3);
+}
+
+#addCityButton {
+    padding: 8px 20px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#addCityButton:hover {
+    background-color: #1976D2;
+}
+
+.city-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
